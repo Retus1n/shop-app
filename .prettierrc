@@ -4,12 +4,9 @@
   "useTabs": false,
   "semi": true,
   "singleQuote": true,
-  "quoteProps": "consistent",
-  "jsxSingleQuote": true,
-  "trailingComma": "es5",
+  "jsxSingleQuote": false,
+  "trailingComma": "all",
   "bracketSpacing": true,
   "jsxBracketSameLine": false,
-  "arrowParens": "always",
-  "requirePragma": false,
-  "insertPragma": false
+  "arrowParens": "always"
 }
