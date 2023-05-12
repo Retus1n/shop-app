@@ -54,34 +54,25 @@ const data: FeaturedProductspDataProps[] = [
   },
 ];
 
-export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ type }) => {
-  console.log('@');
-  return (
-    <div className={styles.featureProducts}>
-      <div className={styles.top}>
-        <Typography
-          variant='title-1'
-          tag='h1'
-          type={type}
-          className={styles.h1}
-        >
-          {' '}
-          products
-        </Typography>
-        <Typography variant='description-1' tag='p' className={styles.p}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non
-          tortor scelerisque, bibendum magna in, luctus odio. Aliquam id mattis
-          tellus. Duis convallis non elit vel maximus. Vestibulum ante ipsum
-          primis in faucibus orci luctus et ultrices posuere cubilia curae;
-          Pellentesque sed accumsan tortor, id efficitur neque. Suspendisse
-          malesuada ac.
-        </Typography>
-      </div>
-      <div className={styles.bottom}>
-        {data.map((item) => (
-          <Card item={item} key={item.id} />
-        ))}
-      </div>
+export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({ type }) => (
+  <div className={styles.featureProducts}>
+    <div className={styles.top}>
+      <Typography variant='title-1' tag='h1' type={type} className={styles.h1}>
+        {' '}
+        products
+      </Typography>
+      <Typography variant='description-1' tag='p' className={styles.p}>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam non tortor
+        scelerisque, bibendum magna in, luctus odio. Aliquam id mattis tellus.
+        Duis convallis non elit vel maximus. Vestibulum ante ipsum primis in
+        faucibus orci luctus et ultrices posuere cubilia curae; Pellentesque sed
+        accumsan tortor, id efficitur neque. Suspendisse malesuada ac.
+      </Typography>
     </div>
-  );
-};
+    <div className={styles.bottom}>
+      {data.map((item) => (
+        <Card item={item} key={item.id} />
+      ))}
+    </div>
+  </div>
+);

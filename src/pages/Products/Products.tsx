@@ -1,5 +1,1 @@
-import { FC } from 'react';
-
-export const Products: FC = () => {
-	return <div>Products</div>;
-};
+export const Products: React.FC = () => <div>Products</div>;
