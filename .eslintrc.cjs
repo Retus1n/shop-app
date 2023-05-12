@@ -23,6 +23,7 @@ module.exports = {
     'import/extensions': 'off',
     'react/function-component-definition': 'off',
     'react/jsx-no-useless-fragment': 'off',
+    'jsx-a11y/label-has-associated-control': 'off',
     'react/prop-types': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
