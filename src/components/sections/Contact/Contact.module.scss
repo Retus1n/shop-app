@@ -1,0 +1,24 @@
+.contact {
+  background-color: cadetblue;
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+
+
+  .wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .icons {
+      display: flex;
+      gap: 15px;
+
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
