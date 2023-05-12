@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
-import { Navbar } from './Navbar';
+import { Navbar, NAVBAR_TEST_ID } from './Navbar';
 
 describe('Navbar', () => {
   beforeEach(() => {
@@ -46,7 +46,7 @@ describe('Navbar', () => {
   });
 
   it('renders the icons', () => {
-    const icons = screen.getAllByTestId('icon');
+    const icons = screen.getAllByTestId(NAVBAR_TEST_ID.ICON);
     expect(icons.length).toBe(4);
   });
 

@@ -19,6 +19,7 @@ module.exports = {
   rules: {
     'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
     'prettier/prettier': 'error',
+    'import/no-extraneous-dependencies': 'off',
     'import/extensions': 'off',
     'react/function-component-definition': 'off',
     'jsx-a11y/no-static-element-interactions': 'off',

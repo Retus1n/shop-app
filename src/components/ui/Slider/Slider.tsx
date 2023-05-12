@@ -8,6 +8,13 @@ const data = [
   'https://img.freepik.com/free-photo/attractive-curly-woman-purple-cashmere-sweater-fuchsia-sunglasses-poses-isolated-wall_197531-24158.jpg?w=996&t=st=1683738907~exp=1683739507~hmac=44b9fad3af227d1b95227387cf41150a9c4c117361d868291b4e58a91cbe66ff',
 ];
 
+export const SLIDER_TEST_ID = {
+  SLIDER: 'slider',
+  CONTAINER: 'container',
+  PREV_BUTTON: 'prev-button',
+  NEXT_BUTTON: 'next-button',
+};
+
 export const Slider: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -19,28 +26,28 @@ export const Slider: FC = () => {
   };
 
   return (
-    <div className={styles.slider} data-testid="slider">
+    <div className={styles.slider} data-testid={SLIDER_TEST_ID.SLIDER}>
       <div
         className={styles.container}
         style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
-        data-testid="container"
+        data-testid={SLIDER_TEST_ID.CONTAINER}
       >
-        <img src={data[0]} alt="" />
-        <img src={data[1]} alt="" />
-        <img src={data[2]} alt="" />
+        <img src={data[0]} alt='' />
+        <img src={data[1]} alt='' />
+        <img src={data[2]} alt='' />
       </div>
       <div className={styles.icons}>
         <div
           className={styles.icon}
           onClick={prevSlide}
-          data-testid="prev-button"
+          data-testid={SLIDER_TEST_ID.PREV_BUTTON}
         >
           <WestOutlined />
         </div>
         <div
           className={styles.icon}
           onClick={nextSlide}
-          data-testid="next-button"
+          data-testid={SLIDER_TEST_ID.NEXT_BUTTON}
         >
           <EastOutlined />
         </div>

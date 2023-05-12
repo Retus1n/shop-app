@@ -41,34 +41,38 @@ const menuRight = [
   },
 ];
 
+export const NAVBAR_TEST_ID = {
+  ICON: 'icon',
+};
+
 export const Navbar: FC = () => (
   <div className={styles.navbar}>
     <div className={styles.wrapper}>
       <div className={styles.left}>
         {menu.map((item) => (
-          <Link className="link" key={item.title} to={item.link} role="link">
+          <Link className='link' key={item.title} to={item.link} role='link'>
             {item.title}
           </Link>
         ))}
       </div>
       <div className={styles.center}>
-        <Link className="link" to="/" role="link">
+        <Link className='link' to='/' role='link'>
           MYSTORE
         </Link>
       </div>
       <div className={styles.right}>
         {menuRight.map((item) => (
-          <Link to={item.link} key={item.title} className="link" role="link">
+          <Link to={item.link} key={item.title} className='link' role='link'>
             {item.title}
           </Link>
         ))}
 
         <div className={styles.icons}>
-          <SearchIcon data-testid="icon" />
-          <PersonOutlineOutlinedIcon data-testid="icon" />
-          <FavoriteBorderOutlinedIcon data-testid="icon" />
+          <SearchIcon data-testid={NAVBAR_TEST_ID.ICON} />
+          <PersonOutlineOutlinedIcon data-testid={NAVBAR_TEST_ID.ICON} />
+          <FavoriteBorderOutlinedIcon data-testid={NAVBAR_TEST_ID.ICON} />
           <div className={styles.cartIcon}>
-            <ShoppingCartOutlinedIcon data-testid="icon" />
+            <ShoppingCartOutlinedIcon data-testid={NAVBAR_TEST_ID.ICON} />
             <span>0</span>
           </div>
         </div>
